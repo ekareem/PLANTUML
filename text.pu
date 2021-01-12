@@ -1,0 +1,23 @@
+@startuml
+
+class Bank {
+- accounts : Account[]
++ manages() : void
+}
+
+class Account{
+- number : int
+- balance : double
++ deposite(amount : double) : boolean
++ withdraw(double) : boolean
+}
+
+class Saving_Account {
+- account_number : int
++ get_interest() : void
+}
+
+Bank *-- Account
+Account <|-- Saving_Account
+
+@enduml
